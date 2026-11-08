@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_roadmap.css' %}">
+</head>
+<body>
+    <header class="header">
+        {% include 'header.html' %}
+    </header>
+    <main>
+        {% include 'menu.html' %}
+        <div class="major">
+        <div class="deck-wrapper">
+        <div class="deck">
+            <div class="card_1">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h1 class="title_card">NFT COLLECTION</h1>
+                        <p class="des_card">Creation and release of 8,000 unique NFTs on the OpenSea platform.</p>
+                    </div>
+                </div>
+                <div class="date">
+                    <p>07.2024</p>
+                </div>
+            </div>
+            <div class="card_2">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h1 class="title_card">CANVAS</h1>
+                        <p class="des_card">Introduction of a digital creative space for users. (Canvas is an interactive application that allows users to create their own pixel art and express their individual creativity.)</p>
+                    </div>
+                </div>
+                <div class="date">2024</div>
+            </div>
+            <div class="card_3">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h1 class="title_card">MINI-QUESTS</h1>
+                        <p class="des_card">Hosting events related to the storyline of our NFTs. (Graphic quests offer an opportunity to immerse yourself in captivating stories that unfold in the world of our NFTs. We have prepared unique events for you to deepen your experience before the release of fully established visual novels.)</p>
+                    </div>
+                </div>
+                <span class="date">@&%#</span>
+            </div>
+            <div class="card_4">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h1 class="title_card">PROJECT ANEMONE</h1>
+                        <p class="des_card">Creation of visual novels based on our NFTs. (Project "Anemone" is our secret project developed specifically for you. We plan to release a series of exciting visual novels based on the unique stories of our NFTs. This project will be our next step during the development phase, and we hope it brings you a lot of joy and unforgettable experiences.)</p>
+                    </div>
+                </div>
+                <span class="date">@&%#</span>
+            </div>
+        </div>
+        </div>
+        </div>
+        <link rel="stylesheet" href="{% static 'css/style_buttons.css' %}">
+        <div class="buttons">
+            <a class="btm_left block"><img id="btm_l" src="{% static 'img/main_img/buttons/arrow_left.png' %}"></a>
+            <div class="ind_card">
+                <button class="ind_1 in"></button>
+                <button class="ind_2 out"></button>
+                <button class="ind_3 out"></button>
+                <button class="ind_4 out"></button>
+            </div>
+            <a class="btm_right"><img id="btm_r" src="{% static 'img/main_img/buttons/arrow_right.png' %}"></a>
+        </div>
+    </main>
+    <script>
+        window.staticUrl = '{% static "" %}';
+    </script>
+    <script src="{% static 'js/script_roadmap.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+header{
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 7;
+    transition: 0.2s;
+}
+
+.top {
+  height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 0;
+  padding: 20px 30px;
+  z-index: 9;
+}
+
+.logo{
+  border-radius: 5px;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.page_name{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+  z-index: 9;
+}
+
+.button-menu {
+  display: flex;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  width: 33px;
+  height: 33px;
+  padding: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.line {
+  position: absolute;
+  background-color: #000;
+}
+
+.first_top_line {
+  border-radius: 2px 0px 0px 2px;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 6px;
+  transition: 0.2s;
+}
+
+.second_top_line {
+  border-radius: 0px 2px 2px 0px;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 6px;
+  transition: 0.2s;
+}
+
+.first_bottom_line {
+  border-radius: 2px 0px 0px 2px;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 6px;
+  margin-bottom: 15px;
+  transition: 0.2s;
+}
+
+.second_bottom_line {
+  border-radius: 0px 2px 2px 0px;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 6px;
+  margin-bottom: 15px;
+  transition: 0.2s;
+}
+
+.button-menu:hover *{
+    cursor: pointer;
+}
+
+.first_top_line.active {
+  transform: rotate(45deg);
+  transition: 0.2s;
+}
+
+.second_top_line.active {
+  transform: rotate(-45deg);
+  transition: 0.2s;
+}
+
+.first_bottom_line.active {
+  transform: rotate(-45deg);
+  transition: 0.2s;
+}
+
+.second_bottom_line.active {
+  transform: rotate(45deg);
+  transition: 0.2s;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.logo:active {
+  filter: brightness(0.5);
+    transition: 0.2s;
+}
+
+@media screen and (min-width: 330px){
+  .top {
+    padding: 20px 20px;
+  }
+
+  .page_name{
+    width: calc(100vw - 40px);
+  }
+}
+
+@media screen and (min-width: 480px){
+  .top {
+    padding: 20px 20px;
+  }
+
+  .page_name{
+    width: calc(100vw - 40px);
+  }
+}
+
+@media screen and (min-width: 768px){
+  .top {
+    padding: 20px 20px;
+  }
+
+  .page_name{
+    width: calc(100vw - 40px);
+  }
+}
+
+@media screen and (min-width: 960px){
+  .top {
+    padding: 20px 20px;
+  }
+  
+  .page_name{
+    width: calc(100vw - 40px);
+  }
+}
+
+@media screen and (min-width: 1280px){
+  .top {
+    padding: 20px 30px;
+  }
+  
+  .page_name{
+    width: calc(100vw - 60px);
+  }
+}

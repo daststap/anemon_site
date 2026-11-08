@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_about.css' %}">
+</head>
+<body>
+    <header class="header">
+        {% include 'header.html' %}
+    </header>
+    <main>
+        {% include 'menu.html' %}
+        <div class="major">
+        <div class="right">
+            <span class="right_bg">1</span>
+        <div class="text">
+            <div class="container-text">
+                <p class="titleText about">ABOUT</p>
+                <p class="des">The 'Anemon' collection features 8,000 unique avatars that reflect our creative philosophy in the world of Web-3. Each one possesses its own distinct characteristics, granting owners exclusive rights and the opportunity to participate in future projects.</p>
+            </div>
+            <div class="nav_buttons">
+                <a href="{% url 'manifesto' %}" class="btm_manifesto"><p>Manifesto</p></a>
+                <div class="opensea in">
+                    <a href="{% url 'manifesto' %}" class="btm_opensea in"><img class="btm_opensea_img" src="{% static 'img/main_img/buttons/opensea_btm.png' %}" onmouseover="changeImage('image2.jpg')"></a>
+                </div>
+            </div>
+            
+        </div>
+        <img src="{% static 'img/about_img/BG About 1920.png' %}" class="bg_about_1920">
+        </div>
+        <div class="back">
+            <img id="backimg" class="backimg_1 in" src="{% static 'img/about_img/back_1.png' %}">
+            <img id="backimg" class="backimg_2 out" src="{% static 'img/about_img/back_2.png' %}">
+            <img id="backimg" class="backimg_4 out" src="{% static 'img/about_img/back_4.png' %}">
+            <img id="backimg" class="backimg_5 out" src="{% static 'img/about_img/back_5.png' %}">
+        </div>
+        <div class="image">
+            <div class="pic_1"><img id="pic" class="pic" src="{% static 'img/about_img/pic_1.png' %}"></div>
+            <div class="pic_2"><img id="pic" class="pic" src="{% static 'img/about_img/pic_2.png' %}"></div>
+            <div class="pic_3"><img id="pic" class="pic pic3" src="{% static 'img/about_img/pic_3.png' %}"></div>
+            <div class="pic_4"><img id="pic" class="pic" src="{% static 'img/about_img/pic_4.png' %}"></div>
+            <div class="pic_5"><img id="pic" class="pic pic5" src="{% static 'img/about_img/pic_5.png' %}"></div>
+        </div>
+        </div>
+        <link rel="stylesheet" href="{% static 'css/style_buttons.css' %}">
+        <div class="buttons">
+            <a class="btm_left block"><img id="btm_l" src="{% static 'img/main_img/buttons/arrow_left.png' %}"></a>
+            <div class="nav_buttons_2">
+                <a href="{% url 'manifesto' %}" class="btm_manifesto_2"><strong>Manifesto</strong></a>
+                <div class="opensea2">
+                    <a href="{% url 'manifesto' %}" class="btm_opensea_2 in"><img src="{% static 'img/main_img/buttons/opensea_btm_adapt960.png' %}"></a>
+                    <span class="soon_blind">1</span>
+                    <p>/soon</p>
+                </div>
+            </div>
+            <a class="btm_right"><img id="btm_r" src="{% static 'img/main_img/buttons/arrow_right.png' %}"></a>
+        </div>
+        
+    </main>
+    <script>
+        window.staticUrl = '{% static "" %}';
+    </script>
+    <script src="{% static 'js/script_about.js' %}"></script>
+</body>
+</html>

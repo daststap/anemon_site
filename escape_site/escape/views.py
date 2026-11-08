@@ -1,0 +1,117 @@
+from django.shortcuts import render
+
+# Create your views here.
+def welcome_page(request):
+    context = {'welcome_color': 'white', 
+    'about_color': 'white',
+    'manifesto_color': 'white',
+    'roadmap_color': 'white',
+    'room_color': 'white',
+    'welcome_img_style': 'welcome_img',
+    'about_img_style': 'about_img in',
+    'manifesto_img_style': 'manifesto_img in',
+    'roadmap_img_style': 'roadmap_img in',
+    'room_img_style': 'room_img in',
+    'welcome_text_style': 'welcome_text active',
+    'about_text_style': 'about_text',
+    'manifesto_text_style': 'manifesto_text',
+    'roadmap_text_style': 'roadmap_text',
+    'room_text_style': 'room_text',
+    'left_btn_style': 'left-btn block',
+    'right_btn_style': 'right-btn',
+    'navig_text': 'Welcome',
+    'count_navig': 0,
+    'page_name': 'WELCOME'}
+    return render(request, 'welcome.html', context)
+
+def about_page(request):
+    context = {'welcome_color': 'white', 
+    'about_color': 'white',
+    'manifesto_color': 'white',
+    'roadmap_color': 'white',
+    'room_color': 'white',
+    'welcome_img_style': 'welcome_img out',
+    'about_img_style': 'about_img',
+    'manifesto_img_style': 'manifesto_img in',
+    'roadmap_img_style': 'roadmap_img in',
+    'room_img_style': 'room_img in',
+    'welcome_text_style': 'welcome_text',
+    'about_text_style': 'about_text active',
+    'manifesto_text_style': 'manifesto_text',
+    'roadmap_text_style': 'roadmap_text',
+    'room_text_style': 'room_text',
+    'left_btn_style': 'left-btn',
+    'right_btn_style': 'right-btn',
+    'navig_text': 'About',
+    'count_navig': 1,
+    'page_name': 'ABOUT'}
+    return render(request, 'about.html', context)
+
+def manifesto_page(request):
+    context = {'welcome_color': 'white', 
+    'about_color': 'white',
+    'manifesto_color': 'white',
+    'roadmap_color': 'white',
+    'room_color': 'white',
+    'welcome_img_style': 'welcome_img out',
+    'about_img_style': 'about_img out',
+    'manifesto_img_style': 'manifesto_img',
+    'roadmap_img_style': 'roadmap_img in',
+    'room_img_style': 'room_img in',
+    'welcome_text_style': 'welcome_text',
+    'about_text_style': 'about_text',
+    'manifesto_text_style': 'manifesto_text active',
+    'roadmap_text_style': 'roadmap_text',
+    'room_text_style': 'room_text',
+    'left_btn_style': 'left-btn',
+    'right_btn_style': 'right-btn',
+    'navig_text': 'Manifesto',
+    'count_navig': 2,
+    'page_name': 'MANIFESTO'}
+    return render(request, 'manifesto.html', context)
+
+def roadmap_page(request):
+    context = {'welcome_color': 'white', 
+    'about_color': 'white',
+    'manifesto_color': 'white',
+    'roadmap_color': 'white',
+    'room_color': 'white',
+    'welcome_img_style': 'welcome_img out',
+    'about_img_style': 'about_img out',
+    'manifesto_img_style': 'manifesto_img out',
+    'roadmap_img_style': 'roadmap_img',
+    'room_img_style': 'room_img in',
+    'welcome_text_style': 'welcome_text',
+    'about_text_style': 'about_text',
+    'manifesto_text_style': 'manifesto_text',
+    'roadmap_text_style': 'roadmap_text active',
+    'room_text_style': 'room_text',
+    'left_btn_style': 'left-btn',
+    'right_btn_style': 'right-btn',
+    'navig_text': 'Road Map',
+    'count_navig': 3,
+    'page_name': 'ROAD MAP'}
+    return render(request, 'roadmap.html', context)
+
+def terms_page(request):
+    context = {'welcome_color': 'white', 
+    'about_color': 'white',
+    'manifesto_color': 'white',
+    'roadmap_color': 'white',
+    'room_color': 'white',
+    'welcome_img_style': 'welcome_img',
+    'about_img_style': 'about_img in',
+    'manifesto_img_style': 'manifesto_img in',
+    'roadmap_img_style': 'roadmap_img in',
+    'room_img_style': 'room_img in',
+    'welcome_text_style': 'welcome_text active',
+    'about_text_style': 'about_text',
+    'manifesto_text_style': 'manifesto_text',
+    'roadmap_text_style': 'roadmap_text',
+    'room_text_style': 'room_text',
+    'navig_text': 'Welcome',
+    'left_btn_style': 'left-btn block',
+    'right_btn_style': 'right-btn',
+    'count_navig': 0,
+    'page_name': 'TERMS & CONDITIONS'}
+    return render(request, 'terms.html', context)

@@ -1,0 +1,136 @@
+ .btm_left{
+      display: flex;
+      width: 60px;
+      height: 60px;
+      margin: 0;
+      border-radius: 20px;
+      background-color: rgba(253, 255, 255, 1);
+      box-shadow: 4px 4px 0 1px rgba(0, 0, 0, 1);
+      justify-content: center;
+      align-items: center;
+      -moz-user-select: none;
+      -o-user-select:none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+       user-select: none;
+  }
+
+  .btm_left.block{
+    border: 0px;
+    opacity: 0.1;
+    transition: 0.1s;
+  }
+
+  .btm_right{
+      display: flex;
+      width: 60px;
+      height: 60px;
+      margin: 0;
+      border-radius: 20px;
+      background-color: rgba(253, 255, 255, 1);
+      box-shadow: -4px 4px 0 1px rgba(0, 0, 0, 1);
+      justify-content: center;
+      align-items: center;
+      -moz-user-select: none;
+      -o-user-select:none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+       user-select: none;
+  }
+
+  .btm_right.block{
+    border: 0px;
+    opacity: 0.1;
+    transition: 0.1s;
+  }
+
+  .btm_left:hover{
+      cursor: pointer;
+  }
+
+  .btm_right:hover{
+      cursor: pointer;
+  }
+
+  .btm_right:active {
+    border: 0px;
+    opacity: 0.1;
+    transition: 0.1s;
+  }
+
+  .btm_left:active {
+    border: 0px;
+    opacity: 0.1;
+    transition: 0.1s;
+  }
+  
+@media screen and (min-width: 330px) {
+  .buttons {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: calc(100vw - 40px);
+    height: 60px;
+    z-index: 3;
+    bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .buttons {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: calc(100vw - 40px);
+    height: 60px;
+    z-index: 3;
+    bottom: 20px;
+  }
+
+  .btm_left{
+    left: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: calc(100vw - 40px);
+    height: 60px;
+    z-index: 3;
+    bottom: 20px;
+  }
+
+  .btm_left{
+    left: 20px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .buttons {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: calc(100vw - 40px);
+    height: 60px;
+    z-index: 3;
+    bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .buttons {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: calc(100vw - 60px);
+    height: 60px;
+    z-index: 3;
+    bottom: 30px;
+  }
+}
+

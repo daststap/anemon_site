@@ -1,0 +1,1601 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  min-height: 100vh;
+}
+
+body{
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and ( min-width: 330px) {
+  body{
+    background: url('../img/roadmap_img/bg_360.png');
+  }
+
+  main{
+    padding: 20px;
+  }
+
+  .deck-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .deck {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .card_1 {
+    width: 300px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_1.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    grid-column: 2 / 4 span;
+    grid-row: 1;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .card_2 {
+    width: 300px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_2.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    transform: translateX(0);
+    grid-column: 2 / 4 span;
+    grid-row: 1;
+    padding: 20px;
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .card_3 {
+    width: 300px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_3.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    transform: translateX(0);
+    grid-column: 2 / 4 span;
+    grid-row: 1;
+    padding: 20px;
+    opacity: 1;
+    z-index: 3;
+  }
+  
+  .card_4 {
+    width: 300px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_4.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    transform: translateX(0);
+    grid-column: 2 / 4 span;
+    grid-row: 1;
+    padding: 20px;
+    opacity: 1;
+    z-index: 4;
+  }
+  
+  .card-content{
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .card-text{
+     position: relative; 
+     margin-top: auto; 
+     text-align: left; 
+     width: auto;
+     height: auto;
+     border: solid 2px black;
+     border-radius: 20px;
+     background-color: white;
+     padding: 20px;
+     overflow: hidden;
+  }
+      
+  .title_card{
+    width: 220px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    margin: 0;
+  }
+  
+  .des_card{
+    width: 220px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .date {
+    position: absolute;
+    bottom: 402px;
+    right: 20px;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    border: solid 2px black;
+  }
+
+  .date p{
+    margin: 0;
+  }
+
+  .card_1 .date{
+    opacity: 0;
+  }
+
+  .card_1.animate-out{
+    transform: translateX(0);
+    transition: 1s;
+  }
+  
+  .card_2.animate-out{
+    transform: translateX(340px);
+    transition: 1s;
+  }
+  
+  .card_2.animate-in{
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_3.animate-in{
+    transform: translateX(340px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-in2{
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_4.animate-in{
+    transform: translateX(340px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-in2{
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s;
+  }
+  
+  .ind_card{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .ind_card button{
+      border: none;
+      cursor: pointer;
+  }
+  
+  .ind_1{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_2{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_3{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_4{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_1.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ .ind_2.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_3.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_4.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ .ind_1.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ .ind_2.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_3.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ .ind_4.out{
+     opacity: 0.3;
+     transition: 1s;
+ } 
+}
+
+@media screen and ( min-width: 480px) {
+  body{
+    background: url('../img/roadmap_img/bg_480.png');
+  }
+
+  main{
+    padding: 20px;
+  }
+
+  .deck-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .deck {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .card_1 {
+    width: 300px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_1.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    grid-column: 2 / 4 span;
+    grid-row: 1;
+    padding: 20px;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .card_2 {
+    width: 300px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_2.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    transform: translateX(0);
+    grid-column: 2 / 4 span;
+    grid-row: 1;
+    padding: 20px;
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .card_3 {
+    width: 300px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_3.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    transform: translateX(0);
+    grid-column: 2 / 4 span;
+    grid-row: 1;
+    padding: 20px;
+    opacity: 1;
+    z-index: 3;
+  }
+  
+  .card_4 {
+    width: 300px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_4.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: absolute;
+    transform: translateX(0);
+    grid-column: 2 / 4 span;
+    grid-row: 1;
+    padding: 20px;
+    opacity: 1;
+    z-index: 4;
+  }
+  
+  .card-content{
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .card-text{
+     position: relative; 
+     margin-top: auto; 
+     text-align: left; 
+     width: auto;
+     height: auto;
+     border: solid 2px black;
+     border-radius: 20px;
+     background-color: white;
+     padding: 20px;
+     overflow: hidden;
+  }
+      
+  .title_card{
+    width: 220px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    margin: 0;
+  }
+  
+  .des_card{
+    width: 220px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .date {
+    position: absolute;
+    bottom: 402px;
+    right: 20px;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    border: solid 2px black;
+  }
+
+  .date p{
+    margin: 0;
+  }
+
+  .card_1 .date{
+    opacity: 0;
+  }
+
+  .card_1.animate-out{
+    transform: translateX(0);
+    transition: 1s;
+  }
+  
+  .card_2.animate-out{
+    transform: translateX(340px);
+    transition: 1s;
+  }
+  
+  .card_2.animate-in{
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_3.animate-in{
+    transform: translateX(340px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-in2{
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_4.animate-in{
+    transform: translateX(340px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-in2{
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s;
+  }
+  
+  .ind_card{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .ind_card button{
+      border: none;
+      cursor: pointer;
+  }
+  
+  .ind_1{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_2{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_3{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_4{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_1.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ .ind_2.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_3.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_4.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ .ind_1.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ .ind_2.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_3.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ .ind_4.out{
+     opacity: 0.3;
+     transition: 1s;
+ } 
+}
+
+@media screen and ( min-width: 768px) {
+  body{
+    background: url('../img/roadmap_img/bg_768.png');
+  }
+
+  main{
+    padding: 30px;
+  }
+
+  .deck-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .deck {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 20px;
+    width: calc(100vw - 80px);
+    height: 80vh;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .card_1 {
+    width: 630px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_1.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    grid-column: 1 / 9 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .card_2 {
+    width: 630px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_2.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(5px);
+    grid-column: 1 / 9 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .card_3 {
+    width: 630px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_3.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(10px);
+    grid-column: 1 / 9 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
+  
+  .card_4 {
+    width: 630px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_4.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(15px);
+    grid-column: 1 / 9 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 4;
+  }
+  
+  .card-content{
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .card-text{
+     position: absolute; 
+     margin-top: auto; 
+     text-align: left; 
+     width: 398px;
+     height: auto;
+     border: solid 2px black;
+     border-radius: 20px;
+     background-color: white;
+     padding: 30px;
+     overflow-y: auto;
+     
+  }
+      
+  .title_card{
+    width: 338px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 24px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    margin: 0;
+  }
+  
+  .des_card{
+    width: 338px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .date {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    border: solid 2px black;
+  }
+
+  .date p{
+    margin: 0;
+  }
+
+  .card_1 .date{
+    opacity: 0;
+  }
+
+  .card_1.animate-out{
+    transform: translateX(0);
+    transition: 1s;
+  }
+  
+  .card_2.animate-out{
+    transform: translateX(690px);
+    transition: 1s;
+  }
+  
+  .card_2.animate-in{
+    transform: translateX(20px);
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_3.animate-in{
+    transform: translateX(730px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-in2{
+    transform: translateX(40px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_4.animate-in{
+    transform: translateX(770px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-in2{
+    transform: translateX(60px);
+    opacity: 1;
+    transition: 1s;
+  }
+  
+  .ind_card{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .ind_card button{
+      border: none;
+      cursor: pointer;
+  }
+  
+  .ind_1{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_2{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_3{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_4{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_1.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ .ind_2.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_3.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_4.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ .ind_1.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ .ind_2.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_3.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ .ind_4.out{
+     opacity: 0.3;
+     transition: 1s;
+ } 
+}
+
+
+@media screen and ( min-width: 960px) {
+  body{
+    background: url('../img/roadmap_img/bg_960.png');
+  }
+
+  main{
+    padding: 30px;
+  }
+
+  .deck-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .deck {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 20px;
+    width: calc(100vw - 60px);
+    height: 80vh;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .card_1 {
+    width: 630px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_1.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    grid-column: 2 / 7 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .card_2 {
+    width: 630px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_2.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(5px);
+    grid-column: 2 / 7 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .card_3 {
+    width: 630px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_3.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(10px);
+    grid-column: 2 / 7 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
+  
+  .card_4 {
+    width: 630px;
+    height: 360px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_4.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(15px);
+    grid-column: 2 / 7 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 4;
+  }
+  
+  .card-content{
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .card-text{
+     position: absolute; 
+     margin-top: auto; 
+     text-align: left; 
+     width: 398px;
+     height: auto;
+     border: solid 2px black;
+     border-radius: 20px;
+     background-color: white;
+     padding: 30px;
+     overflow-y: auto;
+     
+  }
+      
+  .title_card{
+    width: 338px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 24px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    margin: 0;
+  }
+  
+  .des_card{
+    width: 338px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .date {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    border: solid 2px black;
+  }
+
+  .date p{
+    margin: 0;
+  }
+
+  .card_1 .date{
+    opacity: 0;
+  }
+
+  .card_1.animate-out{
+    transform: translateX(0);
+    transition: 1s;
+  }
+  
+  .card_2.animate-out{
+    transform: translateX(690px);
+    transition: 1s;
+  }
+  
+  .card_2.animate-in{
+    transform: translateX(40px);
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_3.animate-in{
+    transform: translateX(730px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-in2{
+    transform: translateX(80px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_4.animate-in{
+    transform: translateX(770px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-in2{
+    transform: translateX(120px);
+    opacity: 1;
+    transition: 1s;
+  }
+  
+  .ind_card{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .ind_card button{
+      border: none;
+      cursor: pointer;
+  }
+  
+  .ind_1{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_2{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_3{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_4{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    transition: 1s;
+ }
+ 
+ .ind_1.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ .ind_2.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_3.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_4.in{
+     opacity: 1;
+     transition: 1s;
+ }
+ 
+ .ind_1.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ .ind_2.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ 
+ .ind_3.out{
+     opacity: 0.3;
+     transition: 1s;
+ }
+ 
+ .ind_4.out{
+     opacity: 0.3;
+     transition: 1s;
+ } 
+}
+
+@media screen and ( min-width: 1280px) {
+  body{
+    background: url('../img/roadmap_img/bg_1280.png');
+  }
+
+  main{
+    padding: 40px;
+  }
+
+  .deck-wrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .deck {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    min-width: 1200px;
+    height: 80vh;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .card_1 {
+    width: 860px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_1.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    grid-column: 2 / 9 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .card_2 {
+    width: 860px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_2.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(-100px);
+    grid-column: 3 / 9 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .card_3 {
+    width: 860px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_3.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(-200px);
+    grid-column: 4 / 9 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
+  
+  .card_4 {
+    width: 860px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("../img/roadmap_img/card_4.png");
+    background-repeat: no-repeat;
+    box-shadow: -10px 0px 25px -10px #000;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    transform: translateX(-300px);
+    grid-column: 5 / 9 span;
+    grid-row: 1;
+    padding: 40px;
+    opacity: 1;
+    z-index: 4;
+  }
+  
+  .card-content{
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .card-text{
+     position: absolute; 
+     margin-top: auto; 
+     text-align: left; 
+     width: 398px;
+     height: auto;
+     border: solid 2px black;
+     border-radius: 20px;
+     background-color: white;
+     padding: 40px;
+     overflow-y: auto;
+     
+  }
+      
+  .title_card{
+    width: 338px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 32px;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    margin: 0;
+  }
+  
+  .des_card{
+    width: 338px;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .date {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    border: solid 2px black;
+  }
+
+  .date p{
+    margin: 0;
+  }
+
+  .card_1 .date{
+    opacity: 0;
+  }
+
+  .card_1.animate-out{
+    transform: translateX(0);
+    transition: 1s;
+  }
+  
+  .card_2.animate-out{
+    transform: translateX(840px);
+    transition: 1s;
+  }
+  
+  .card_2.animate-in{
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_3.animate-in{
+    transform: translateX(840px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_3.animate-in2{
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-out{
+    transform: translateX(250%);
+    transition: 1s;
+  }
+  
+  .card_4.animate-in{
+    transform: translateX(840px);
+    opacity: 1;
+    transition: 0.5s;
+  }
+  
+  .card_4.animate-in2{
+    transform: translateX(0);
+    opacity: 1;
+    transition: 1s;
+  }
+  
+  .ind_card{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .ind_card button{
+      border: none;
+      cursor: pointer;
+  }
+  
+  .ind_1{
+     display: inline-block;
+     width: 30px;
+     height: 20px;
+     border-radius: 4px;
+     background: black;
+     color: white;
+     transition: 1s;
+  }
+  
+  .ind_2{
+     display: inline-block;
+     width: 30px;
+     height: 20px;
+     border-radius: 4px;
+     background: black;
+     color: white;
+     transition: 1s;
+  }
+  
+  .ind_3{
+     display: inline-block;
+     width: 30px;
+     height: 20px;
+     border-radius: 4px;
+     background: black;
+     color: white;
+     transition: 1s;
+  }
+  
+  .ind_4{
+     display: inline-block;
+     width: 30px;
+     height: 20px;
+     border-radius: 4px;
+     background: black;
+     color: white;
+     transition: 1s;
+  }
+  
+  .ind_1.in{
+      opacity: 1;
+      transition: 1s;
+  }
+  
+  .ind_2.in{
+      opacity: 1;
+      transition: 1s;
+  }
+  
+  
+  .ind_3.in{
+      opacity: 1;
+      transition: 1s;
+  }
+  
+  
+  .ind_4.in{
+      opacity: 1;
+      transition: 1s;
+  }
+  
+  .ind_1.out{
+      opacity: 0.3;
+      transition: 1s;
+  }
+  
+  .ind_2.out{
+      opacity: 0.3;
+      transition: 1s;
+  }
+  
+  
+  .ind_3.out{
+      opacity: 0.3;
+      transition: 1s;
+  }
+  
+  .ind_4.out{
+      opacity: 0.3;
+      transition: 1s;
+  } 
+}

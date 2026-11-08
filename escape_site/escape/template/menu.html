@@ -1,0 +1,81 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_menu.css' %}">
+<div class="menu-mobile">
+    <div class="text-navig-mobile">
+        <a href="{% url 'welcome' %}" class="welcome_text_mobile">Welcome</a>
+        <hr>
+        <a href="{% url 'about' %}" class="about_text_mobile">About</a>
+        <hr>
+        <a href="{% url 'manifesto' %}" class="manifesto_text_mobile">Manifesto</a>
+        <hr>
+        <a href="{% url 'roadmap' %}" class="roadmap_text_mobile">Road Map</a>
+        <hr>
+        <div class="soon_page_mobile">
+            <a class="roommap_text_mobile">Room</a>
+            <img class="soon_img_mobile" src="{% static 'img/main_img/menu/soon_mobile.png' %}">
+        </div>
+        <hr>
+    </div>
+    <div class="bot">
+        <div class="social-buttons">
+            <a class="Xwiter" href=""><img class="x_img" src="{% static 'img/main_img/logo/X%20Twitter_mobile.png' %}"></a>
+            <a class="Discord" href=""><img class="dis_img" src="{% static 'img/main_img/logo/Discord_mobile.png' %}"></a>
+            <a class="Opensea" href=""><img class="sea_img" src="{% static 'img/main_img/logo/Open%20sea.png' %}"></a>
+        </div>
+        <div class="copy-text">
+            <p>©Escape | All Rights Reserved | <span><a href="{% url 'terms' %}"  class="terms-text">Term and conditions</a></span> |</p>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="navig">
+        <div class="ind_navig">
+            <span class="{{ welcome_text_style }}" style="color: {{ welcome_color }}";>Welcome</span>
+            <span class="{{ about_text_style }}" style="color: {{ about_color }}">About</span>
+            <span class="{{ manifesto_text_style }}" style="color: {{ manifesto_color }}">Manifesto</span>
+            <span class="{{ roadmap_text_style }}" style="color: {{ roadmap_color }}">Road Map</span>
+            <span class="{{ room_text_style }}" style="color: {{ room_color }}">Room<img class="soon_img" src="{% static 'img/main_img/menu/soon.png' %}"></span>
+        </div>
+        <div class="navig-pic-container">
+            <button class="{{left_btn_style}}"><img id="navig_btn_l" src="{% static 'img/main_img/buttons/menubtm%20left.png' %}"></button>
+            <div class="navig_pic">
+                <img class="frame_img" src="{% static 'img/main_img/menu/portal.png' %}">
+                <a href="{% url 'welcome' %}"><img class="{{ welcome_img_style }}" src="{% static 'img/main_img/menu/welcome_img.png' %}" alt="Welcome image"></a>
+                <a href="{% url 'about' %}"><img class="{{ about_img_style }}" src="{% static 'img/main_img/menu/about_img.png' %}" alt="About image"></a>
+                <a href="{% url 'manifesto' %}"><img class="{{ manifesto_img_style }}" src="{% static 'img/main_img/menu/manifesto_img.png' %}" alt="Manifesto image"></a>
+                <a href="{% url 'roadmap' %}"><img class="{{ roadmap_img_style }}" src="{% static 'img/main_img/menu/roadmap_img.png' %}" alt="Road Map image"></a>
+                <a><img class="{{ room_img_style }}" src="{% static 'img/main_img/menu/room_img.png' %}" alt="Team image"></a>
+                <a class="navig-text">{{navig_text}}</a>
+            </div>
+            <button class="{{right_btn_style}}"><img id="navig_btn_r" src="{% static 'img/main_img/buttons/menubtm%20raight.png' %}"></button>
+        </div>
+        <div class="bot_links">
+            <div class="links">
+                <strong>LINKS:</strong>
+                <a>X</a>
+                <a>Discord</a>
+                <a>OpenSea</a>
+            </div>
+            <div class="links">
+                <strong>LINKS:</strong>
+                <a>X</a>
+                <a>Discord</a>
+                <a>OpenSea</a>
+            </div>
+        </div>
+    </div>
+    <div class="bot">
+        <div class="copy-text">
+            <p>©Anemon | All Rights Reserved | <span><a href="{% url 'terms' %}"  class="terms-text">Term and conditions</a></span> |</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let count_navig = {{count_navig}};
+    window.welcomeUrl = '{% url "welcome" %}';
+    window.aboutUrl = '{% url "about" %}';
+    window.manifestoUrl = '{% url "manifesto" %}';
+    window.roadmapUrl = '{% url "roadmap" %}';
+</script>
+<script src="{% static 'js/script_menu.js' %}"></script>

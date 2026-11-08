@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anemon</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_welcome.css' %}">
+</head>
+<body>
+    <header class="header">
+        {% include 'header.html' %}
+    </header>
+    <main>
+        {% include 'menu.html' %}
+        <div class="major">
+        <div class="bg_img"></div>
+        <div class="w-1">
+            <div class="window_1">
+                <div class="pic">
+                    <div class="img_1">
+                        <img src="{% static 'img/welcome_img/img%20a.png' %}">
+                    </div>
+                </div>
+                    <div class="des">
+                        <h1>ANEMON</h1>
+                        <p>It is a project that embodies our visions and inspirations in each unique NFT.<br><br>Each generated "Avatar" in our collection reflects our desire for self-expression and the creation of art that tells its own story and reminds us about the personal things of each person.</p>
+                    </div>
+            </div>
+        </div>
+        <div class="w-2">
+            <div class="window_2">
+                <div class="des_2">
+                    <p><strong>Anemon</strong> — is primarily an NFT collection, which it opens up the opportunity for us to create original stories and artworks that go beyond conventional notions of digital art. <br><br>As a result, each hero in our collection ceases to be just an ordinary avatar; they become your companion with their own story, character, and goals.</p>
+                </div>
+                <div class="pic_2">
+                    <div class="img_2">
+                        <img src="{% static 'img/welcome_img/img%20b.png' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-3">
+        <div class="window_3">
+        <div class="pic_1">
+            <div class="img_3">
+                <img id='img3' src="{% static 'img/welcome_img/img%20c.png' %}">
+            </div>
+        </div>
+        <div class="des_3">
+            <p>Join us to dive into our vision of digital art. <br>Discover unique NFTs, be inspired by our characters, and become part of our creative journey.</p>
+        </div>
+        </div>
+        </div>
+        <div class="w-4">
+        <div class="window_4">
+        <div class="pic_pers_1"><img id="pers1" src="{% static 'img/welcome_img/img%20pers%20a%20talk.png' %}"></div>
+        <div class="des_4">
+            <p>Hey, I invite you to visit the <strong>'About'</strong> page.<br><br>There you'll find interesting technical aspects about our collection.</p>
+        </div>
+        <a href="about/" class="btm_about"><strong>ABOUT</strong></a>
+        <div class="des_5">
+            <p>Let's endeavor upon a journey to the <strong>'Manifesto'</strong> page.</p>
+            <p class="des_6">Also, feel free to use the menu button for easy navigation throughout the site.</p>
+        </div>
+        <div class="pic_pers_2"><img id="pers2" src="{% static 'img/welcome_img/img%20pers%20b.png' %}"></div>
+        </div>   
+        </div>
+        </div>
+        <link rel="stylesheet" href="{% static 'css/style_buttons.css' %}">
+
+        <div class="buttons">
+            <a class="btm_left block"><img id="btm_l" src="{% static 'img/main_img/buttons/arrow_left.png' %}"></a>
+            <a href="{% url 'about' %}" class="btm_about_2"><strong>ABOUT</strong></a>
+            <a class="btm_right"><img id="btm_r" src="{% static 'img/main_img/buttons/arrow_right.png' %}"></a>
+        </div>
+    </main>
+    <script>
+        window.staticUrl = '{% static "" %}';
+    </script>
+    <script src="{% static 'js/script_welcome.js' %}"></script>
+</body>
+</html>

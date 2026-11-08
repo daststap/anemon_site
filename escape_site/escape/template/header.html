@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style_header.css' %}">
+<div class="top">
+  <a href="{% url 'welcome' %}" class="logo"><img src="{% static 'img/main_img/logo/anemon.svg' %}"></a>
+  <p class="page_name">{{ page_name }}</p>
+  <div class="button-menu">
+    <div class="line first_top_line"></div>
+    <div class="line second_top_line"></div>
+    <div class="line first_bottom_line"></div>
+    <div class="line second_bottom_line"></div>
+  </div>
+</div>

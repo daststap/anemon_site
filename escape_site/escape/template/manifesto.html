@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style_manifesto.css' %}">
+</head>
+<body>
+    <header class="header">
+        {% include 'header.html' %}
+    </header>
+    <main>
+        {% include 'menu.html' %}
+
+        <div class="major">
+            <div class="manif_back">
+                <img class="manif_back_left" src="{% static 'img/manifesto_img/manif_back_left.png' %}">
+                <img class="manif_back_right" src="{% static 'img/manifesto_img/manif_back_right.png' %}">
+            </div>
+            
+            <div class="back-img">
+                <img id="img_back" src="{% static 'img/manifesto_img/back_img_1.png' %}">
+            </div>
+            <div class="pt">
+            <div class="container">
+                <div class="pers_3"><img id="pers_img3" src="{% static 'img/manifesto_img/img%20pers%203.png' %}"></div>
+                <div class="pers_2"><img id="pers_img2" src="{% static 'img/manifesto_img/img%20pers%202.png' %}"></div>
+                <div class="pers_1"><img id="pers_img1" src="{% static 'img/manifesto_img/img%20pers%201.png' %}"></div>
+                <div class="pers_4"><img id="pers_img4" src="{% static 'img/manifesto_img/img%20pers%204.png' %}"></div>
+            </div>
+            </div>
+            <div class="dialog-window">
+                <p class="dialog-text">Welcome to the Manifesto.</p>
+                <a href="{% url 'roadmap' %}" class="btm_roadmap"><strong>Road Map</strong></a>
+                <button class="btm_opacity"><img src="{% static 'img/main_img/buttons/opacity_btm.png' %}" onmouseover="this.src= window.staticUrl + 'img/main_img/buttons/opacity_btm_hover.png';" onmouseout="this.src= window.staticUrl + 'img/main_img/buttons/opacity_btm.png';"></button>
+            </div>
+        </div>
+        <link rel="stylesheet" href="{% static 'css/style_buttons.css' %}">
+        <div class="buttons">
+            <a class="btm_left block"><img id="btm_l" src="{% static 'img/main_img/buttons/arrow_left.png' %}"></a>
+            <a href="{% url 'roadmap' %}" class="btm_roadmap_2"><strong>Road Map</strong></a>
+            <a class="btm_right"><img id="btm_r" src="{% static 'img/main_img/buttons/arrow_right.png' %}"></a>
+        </div>    
+    </main>
+    <script>
+        window.staticUrl = '{% static "" %}';
+    </script>
+    <script src="{% static 'js/script_manifesto.js' %}"></script>
+</body>
+</html>
